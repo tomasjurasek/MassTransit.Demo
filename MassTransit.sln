@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31808.319
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit.API", "MassTransit.API\MassTransit.API.csproj", "{86267E2E-791E-4427-B404-F6B4ABD9BA5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86267E2E-791E-4427-B404-F6B4ABD9BA5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86267E2E-791E-4427-B404-F6B4ABD9BA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86267E2E-791E-4427-B404-F6B4ABD9BA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86267E2E-791E-4427-B404-F6B4ABD9BA5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {127915AC-8A95-4AED-B83D-E8B9E395B0CB}
+	EndGlobalSection
+EndGlobal
