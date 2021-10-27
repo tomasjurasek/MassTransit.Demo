@@ -11,11 +11,11 @@ namespace MassTransit.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DataController : ControllerBase
+    public class CommandController : ControllerBase
     {
         private readonly IBus _bus;
 
-        public DataController(IBus bus)
+        public CommandController(IBus bus)
         {
             _bus = bus;
         }

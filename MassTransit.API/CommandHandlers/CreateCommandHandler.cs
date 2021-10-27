@@ -7,7 +7,7 @@ namespace MassTransit.API.CommandHandlers
     {
         public Task Consume(ConsumeContext<CreateCommand> context)
         {
-            throw new System.NotImplementedException();
+            return Task.CompletedTask;
         }
     }
 }
