@@ -27,7 +27,7 @@ namespace MassTransit.API
             services.AddMassTransit(x =>
             {
                 x.AddConsumer<CommandConsumer>();
-
+                #region memory
                 //x.UsingInMemory((context, cfg) => {
                 //    cfg.ReceiveEndpoint(nameof(CommandConsumer), cfg =>
                 //    {
@@ -35,28 +35,28 @@ namespace MassTransit.API
                 //        cfg.ConfigureConsumer<CommandConsumer>(context);
                 //    });
                 //});
-
-                x.UsingRabbitMq((context, cfg) =>
-                {
-                    cfg.ReceiveEndpoint(nameof(CommandConsumer), cfg =>
-                    {
-                        cfg.PrefetchCount = 1;
-                        cfg.ConfigureConsumer<CommandConsumer>(context);
-                    });
-                });
-
-
-
+                #endregion
+                #region rabbit
+                //x.UsingRabbitMq((context, cfg) =>
+                //{
+                //    cfg.ReceiveEndpoint(nameof(CommandConsumer), cfg =>
+                //    {
+                //        cfg.PrefetchCount = 1;
+                //        cfg.ConfigureConsumer<CommandConsumer>(context);
+                //    });
+                //});
+                #endregion
             });
 
             services.AddMassTransitHostedService();
 
+            #region mediator
             services.AddMediator(x =>
             {
                 x.AddConsumer<CreateCommandHandler>();
                 x.AddConsumer<UpdateCommandHandler>();
             });
-
+            #endregion
 
             services.AddSwaggerGen(c =>
             {
